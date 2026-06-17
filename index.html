@@ -2,23 +2,36 @@
 <h1>ku soo dhowaada websiteka gorgor</h1>
 
 
-    <!-- Qaybta Contact Us -->
-    <div style="padding: 20px; background-color: #f8f9fa; border-radius: 10px;">
-        <h2>Contact Me</h2>
-        <p>Feel free to reach out to me for any inquiries or collaborations.</p>
+    <div style="padding: 20px; background-color: #f8f9fa; border: 1px solid #ccc; border-radius: 5px;">
+    <h2>Contact Me</h2>
+    <form id="contactForm" action="mailto:caydaruusjamaac87@gmail.com" method="post" enctype="text/plain">
+        <label>Name:</label><br>
+        <input type="text" id="name" name="name" style="width: 100%;" required><br><br>
+        
+        <label>Email:</label><br>
+        <input type="email" id="email" name="email" style="width: 100%;" required><br><br>
+        
+        <label>Message:</label><br>
+        <textarea id="message" name="message" style="width: 100%; height: 100px;" required></textarea><br><br>
+        
+        <button type="submit" style="padding: 10px 20px;">Submit</button>
+    </form>
+</div>
 
-        <form action="mailto:Caydaruusjamaac87@gmail.com" method="post" enctype="text/plain">
-            <label>Name:</label><br>
-            <input type="text" name="name" style="width: 100%; padding: 8px; margin-bottom: 10px;"><br>
-            
-            <label>Email:</label><br>
-            <input type="email" name="email" style="width: 100%; padding: 8px; margin-bottom: 10px;"><br>
-            
-            <label>Message:</label><br>
-            <textarea name="message" style="width: 100%; padding: 8px; margin-bottom: 10px;"></textarea><br>
-            
-            <button type="submit" style="padding: 10px 20px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer;">Send Message</button>
-        </form>
+<script>
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    // Kani wuxuu qabanayaa xogta si aad u arki karto amnigooda
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    console.log("Xogta la qabtay:", { name, email, message });
+    
+    // Foomku wuxuu sii wadi doonaa shaqadiisa caadiga ah ee mailto
+    alert("Fariintaada waa la diyaariyay!");
+});
+</script>
+
 
         <hr>
         
